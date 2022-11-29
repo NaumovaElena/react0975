@@ -5,12 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { getUser } from './state';
+import { getUsers } from './state';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <App function={getUser}/>
+        <App function={{key_getUser: getUser, key_getUsers: getUsers }}/>
     </BrowserRouter>
 );
 

@@ -12,8 +12,8 @@ const Profile = (props) => {
           {user.name} {user.lastname}
         </h1>
         <h2 className={styles.about}>{user.about}</h2>
-        <p>E-mail: {user.email}</p>
-        <p>Id: {user.id}</p>
+        <p className={styles.email}>E-mail: {user.email}</p>
+        <p style={{fontWeight: "700"}}>Id: {user.id}</p>
         <p className={styles.paragraph}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
           veritatis cupiditate aspernatur quas explicabo iusto eius
