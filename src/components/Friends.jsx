@@ -40,7 +40,7 @@ componentDidMount() {
           />
         );
       }
-      // this.setState({userRow: userRow});
+      this.setState({userRow: userRow});
     });    
 }
 
@@ -55,7 +55,7 @@ componentDidMount() {
           </thead>
           {/* <tbody>{userRow}</tbody> */}
           <tbody></tbody>
-          {/* <tbody>{this.state.userRow}</tbody> */}
+          <tbody>{this.state.userRow}</tbody>
         </table>
       );
   }  

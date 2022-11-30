@@ -7,7 +7,7 @@ const user = {
   avatar: "https://www.seekpng.com/png/full/356-3562377_personal-user.png",
 };
 
-// let users = {};
+let users = {};
 // const users = {
 //   0: { name: "Валерия", lastname: "Енотина", id: 4 },
 //   1: { name: "Ипатий", lastname: "Яблочков", id: 9 },
@@ -18,17 +18,18 @@ const user = {
 // };
 
 
-export function getUser() {
-//export function getUser(userId) {
+// export function getUser() {
+export function getUser(userId) {
   // for (let i = 0; i < Object.keys(users).length; i++) {
-  //   if (users[i].id == userId) return users[i];
-  // }
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id == userId) return users[i];
+  }
   return user;
 }
 
 
 export async function getUsers() {
   let response = await fetch("http://aroma.viccora.p-host.in/getUsers");
-  let users = await response.json();
+  users = await response.json();
   return users;
 }
